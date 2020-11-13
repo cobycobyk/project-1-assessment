@@ -20,12 +20,14 @@ function render() {
 };
 function handlePlusClick(evt) {
     let input = Number(valueEl.value);
+    if (isNaN(input)) return;
     num += input;
     valueEl.value = '';
     render();
 };
 function handleMinusClick(evt) {
     let input = Number(valueEl.value);
+    if (isNaN(input)) return;
     num -= input;
     valueEl.value = '';
     render();
